@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+-->
+
+
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+           xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:context = "http://www.springframework.org/schema/context"
+           xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+                                       <!--      Using setter injection -->
+      <bean id="customer" class="springQ1.Customer">
+          <property name="customerId" value="111"/>
+          <property name="customerName" value="Mujahid"/>
+          <property name="customerContact" value="7999244400"/>
+          <property name="customerAddress" ref="custAddress"/>
+
+      </bean>
+      <bean id="custAddress" class="springQ1.Address">
+          <property name="street" value="kela bagan"/>
+          <property name="city" value="Jamshedpur"/>
+          <property name="state" value="Jharkhand"/>
+          <property  name="country" value="India"/>
+          <property name="zip" value="832110" />
+      </bean>
+
+
+
+                                <!-- Using constructor injection -->
+    <bean id="customerCon" class = "springQ1.Customer">
+        <constructor-arg  type ="int" value="112"/>
+        <constructor-arg value="Afridi"/>
+        <constructor-arg value="9570169889"/>
+        <constructor-arg ref="custAddressCon"/>
+    </bean>
+    <bean id="custAddressCon" class="springQ1.Address">
+        <constructor-arg value="kela bagan"/>
+        <constructor-arg value="Jamshedpur"/>
+        <constructor-arg value="Jharkhand"/>
+        <constructor-arg value="India"/>
+        <constructor-arg value="832110" />
+    </bean>
+
+    <!-- instead of adding each bean postPorcessor -->
+    <context:annotation-config/>
+</beans>
