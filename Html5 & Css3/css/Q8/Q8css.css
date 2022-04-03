@@ -1,0 +1,12 @@
+.p1 {
+    border: 6px solid black;
+    background-color:rgb(7, 101, 129);
+}
+.p2 {
+    border: 4px solid black;
+    background-color:rgb(0, 128, 128);
+}   
+.p3 {
+    border: 2px solid black;
+    background-color:rgb(0, 87, 128);
+}
