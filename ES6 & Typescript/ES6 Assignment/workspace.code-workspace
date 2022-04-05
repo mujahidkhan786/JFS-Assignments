@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\eclipse-workspace"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "workspace"
+	}
+}
