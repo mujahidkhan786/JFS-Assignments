@@ -1,0 +1,18 @@
+app:
+    name: My App
+    description: Welcome to ${app.name}
+
+
+my:
+   greeting: Hello World
+   list:
+       Value: One, Two, Three
+
+db:
+   connection: "{connectionString: 'http://___', userName:'Mujahid', password: 'Mujahid'}"
+   host: 127.8.0.1
+   port: 1200
+
+management.endpoints.web.exposure.include: "*"
+
+spring.cloud.config.uri: http://localhost:8888
